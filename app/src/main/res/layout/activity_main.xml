@@ -23,6 +23,7 @@
             android:layout_marginHorizontal="10dp"
             android:text="@string/boton_1"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/purple_500"
             android:id="@+id/btn_1"/>
@@ -34,6 +35,7 @@
             android:layout_marginHorizontal="10dp"
             android:text="@string/boton_2"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/purple_500"
             android:id="@+id/btn_2"/>
@@ -45,6 +47,7 @@
             android:layout_marginHorizontal="10dp"
             android:text="@string/boton_3"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/purple_500"
             android:id="@+id/btn_3"/>
@@ -56,6 +59,7 @@
             android:layout_marginHorizontal="10dp"
             android:text="@string/boton_4"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/purple_500"
             android:id="@+id/btn_4"/>
@@ -67,9 +71,22 @@
             android:layout_marginHorizontal="10dp"
             android:text="@string/boton_5"
             android:textSize="30sp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:background="@color/purple_500"
             android:id="@+id/btn_5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/tv_texto_btn5"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/tv_btn_5"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 
