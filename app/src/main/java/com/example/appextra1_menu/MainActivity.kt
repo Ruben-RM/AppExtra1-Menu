@@ -4,21 +4,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import androidx.collection.emptyLongSet
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btn_1:AppCompatButton
-    lateinit var btn_2:AppCompatButton
-    lateinit var btn_3:AppCompatButton
-    lateinit var btn_4:AppCompatButton
-    lateinit var btn_5:AppCompatButton
-    lateinit var tv_btn_5:TextView
+    private lateinit var btn1:AppCompatButton
+    private lateinit var btn2:AppCompatButton
+    private lateinit var btn3:AppCompatButton
+    private lateinit var btn4:AppCompatButton
+    private lateinit var btn5:AppCompatButton
+    private lateinit var tvBtn5:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,42 +38,44 @@ class MainActivity : AppCompatActivity() {
 
     private fun initComponents()
     {
-        btn_1 = findViewById(R.id.btn_1)
-        btn_2 = findViewById(R.id.btn_2)
-        btn_3 = findViewById(R.id.btn_3)
-        btn_4 = findViewById(R.id.btn_4)
-        btn_5 = findViewById(R.id.btn_5)
-        tv_btn_5 = findViewById(R.id.tv_btn_5)
+        btn1 = findViewById(R.id.btn_1)
+        btn2 = findViewById(R.id.btn_2)
+        btn3 = findViewById(R.id.btn_3)
+        btn4 = findViewById(R.id.btn_4)
+        btn5 = findViewById(R.id.btn_5)
+        tvBtn5 = findViewById(R.id.tv_btn_5)
     }
 
     private fun initListeners()
     {
-        btn_1.setOnClickListener()
+        btn1.setOnClickListener()
         {
             nav2Act2()
         }
 
-        btn_2.setOnClickListener()
+        btn2.setOnClickListener()
         {
-
+            Toast.makeText(this, "¡Pulsaste el segundo botón!", Toast.LENGTH_LONG).show()
         }
 
-        btn_3.setOnClickListener()
+        btn3.setOnClickListener()
         {
-
+            Snackbar.make(btn3, "¡Pulsaste el tercer botón!", Snackbar.LENGTH_SHORT)
+                .setAnchorView(btn3)
+                .show()
         }
 
-        btn_4.setOnClickListener()
+        btn4.setOnClickListener()
         {
             finishAffinity()
         }
 
-        btn_5.setOnClickListener()
+        btn5.setOnClickListener()
         {
-            if (tv_btn_5.visibility == View.VISIBLE)
-                tv_btn_5.visibility = View.INVISIBLE
+            if (tvBtn5.visibility == View.VISIBLE)
+                tvBtn5.visibility = View.INVISIBLE
             else
-                tv_btn_5.visibility = View.VISIBLE
+                tvBtn5.visibility = View.VISIBLE
         }
     }
 
