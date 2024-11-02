@@ -6,4 +6,6 @@
     <string name="boton_4">Boton 4 (Cerrar App)</string>
     <string name="boton_5">Boton 5 (Mostrar Texto)</string>
     <string name="tv_texto_btn5">Si estás viendo esto, es que le diste al botón de arriba.</string>
+    <string name="str_ventana_btn1">Pulsaste el botón y abriste esta ventana. Puedes volver atrás pulsando el botón de debajo.</string>
+    <string name="str_boton_1_back2Main">Vuelve a la pantalla anterior</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.appextra1_menu
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun initComponents()
+    private fun initComponents()
     {
         btn_1 = findViewById(R.id.btn_1)
         btn_2 = findViewById(R.id.btn_2)
@@ -44,11 +45,11 @@ class MainActivity : AppCompatActivity() {
         tv_btn_5 = findViewById(R.id.tv_btn_5)
     }
 
-    fun initListeners()
+    private fun initListeners()
     {
         btn_1.setOnClickListener()
         {
-
+            nav2Act2()
         }
 
         btn_2.setOnClickListener()
@@ -73,5 +74,12 @@ class MainActivity : AppCompatActivity() {
             else
                 tv_btn_5.visibility = View.VISIBLE
         }
+    }
+
+    private fun nav2Act2()
+    {
+        val intentA2 = Intent(this, btn1_Activity::class.java)
+
+        startActivity(intentA2)
     }
 }
